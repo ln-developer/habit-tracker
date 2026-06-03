@@ -11,7 +11,6 @@ export const Category = {
   Learning: "learning",
   Mindfulness: "mindfulness",
   Work: "work",
-  Other: "other",
 } as const;
 
 export type CategoryType = (typeof Category)[keyof typeof Category];
@@ -25,4 +24,12 @@ export type HabitType = {
   daysOfWeek?: number[];
   createdAt: string;
   completions: string[];
+};
+
+export type HabitFormState = {
+  name: string;
+  emoji: string;
+  category: CategoryType;
+  frequency: FrequencyType;
+  daysOfWeek: number[];
 };

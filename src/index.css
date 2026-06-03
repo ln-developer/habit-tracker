@@ -1,3 +1,16 @@
+:root {
+  --bg: #f5f0e8;
+  --surface: #edeade;
+  --surface2: #e4ddd0;
+  --ink: #1c1917;
+  --ink2: #44403c;
+  --muted: #a8a29e;
+  --accent: #d97706;
+  --accent2: #059669;
+  --border: rgba(28, 25, 23, 0.12);
+  --error: #dc2626;
+}
+
 *,
 *::before,
 *::after {

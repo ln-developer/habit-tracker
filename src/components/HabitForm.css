@@ -1,0 +1,171 @@
+.form-group {
+  padding: 20px 24px 0;
+
+  display: flex;
+  flex-direction: column;
+
+  & .form-control {
+    margin-bottom: 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    & .form-control__label {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+
+      margin-bottom: 8px;
+
+      font-family: "DM Mono", monospace;
+      font-size: 11px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+
+      & .form-control_required {
+        color: var(--accent);
+      }
+    }
+
+    & .form-control__input {
+      padding: 13px 16px;
+
+      width: 100%;
+      background: var(--surface);
+      border: 1.5px solid var(--border);
+      border-radius: 14px;
+
+      font-family: "Instrument Sans", sans-serif;
+      font-size: 15px;
+      color: var(--ink);
+
+      outline: none;
+      transition: border-color 0.2s;
+
+      &.invalid {
+        border: 1.5px solid var(--accent);
+      }
+    }
+
+    & .form-control__error {
+      margin-top: 8px;
+
+      font-family: "DM Mono", monospace;
+      font-size: 11px;
+      color: var(--accent);
+      text-transform: uppercase;
+    }
+
+    & .form-control__options {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      flex: 1;
+
+      & .form-control__option {
+        padding: 12px 14px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+
+        background: var(--surface);
+        cursor: pointer;
+
+        width: fit-content;
+        border-radius: 10px;
+        border: 1.5px solid var(--border);
+        transition: all 0.15s;
+
+        font-family: "Instrument Sans", sans-serif;
+        font-size: 13px;
+        font-weight: 600;
+        font-size: 18px;
+        color: var(--ink2);
+
+        &.active {
+          border-color: var(--accent);
+          background: rgba(217, 119, 6, 0.06);
+
+          color: var(--accent);
+
+          transition: border-color 0.2s;
+        }
+      }
+    }
+
+    & .form-control__days {
+      display: flex;
+      gap: 6px;
+      justify-content: space-between;
+
+      & .form-control__day {
+        width: 52px;
+        height: 52px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 10px;
+        border: 1.5px solid var(--border);
+        background: var(--surface);
+
+        font-family: "DM Mono", monospace;
+        font-size: 11px;
+        color: var(--muted);
+        font-weight: 500;
+
+        cursor: pointer;
+        transition: all 0.15s;
+
+        &.active {
+          background: var(--ink);
+          border-color: var(--ink);
+
+          color: var(--bg);
+        }
+      }
+    }
+
+    & .form-control__selected-days {
+      margin-top: 8px;
+
+      font-family: "DM Mono", monospace;
+      font-size: 10px;
+      color: var(--muted);
+    }
+  }
+
+  & .form-group__submit-btn {
+    padding: 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    width: 100%;
+    background: var(--ink);
+    border: none;
+    border-radius: 16px;
+
+    font-family: "Instrument Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--bg);
+
+    cursor: pointer;
+
+    &.edit {
+      background: var(--accent2);
+    }
+
+    &:disabled {
+      opacity: 0.6;
+      cursor: default;
+    }
+  }
+}
